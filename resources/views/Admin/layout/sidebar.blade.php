@@ -30,7 +30,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a style="display: block;padding: .5rem 1rem;margin-bottom: .2rem;text-transform: uppercase;font-size: 14px">Quản trị hệ thống</a>
+                    <a style="color: #c2c7d0;display: block;padding: .5rem 1rem;margin-bottom: .2rem;text-transform: uppercase;font-size: 14px">Quản trị hệ thống</a>
                 </li>
                 <li class="nav-item">
                     <a href="{{route('quan-tri.user.index')}}" class="nav-link">
@@ -49,7 +49,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a style="display: block;padding: .5rem 1rem;margin-bottom: .2rem;text-transform: uppercase;font-size: 14px">Quản trị nội dung</a>
+                    <a style="color: #c2c7d0;display: block;padding: .5rem 1rem;margin-bottom: .2rem;text-transform: uppercase;font-size: 14px">Quản trị nội dung</a>
                 </li>
                 <li class="nav-item">
                     <a href="{{route('quan-tri.category.index')}}" class="nav-link">

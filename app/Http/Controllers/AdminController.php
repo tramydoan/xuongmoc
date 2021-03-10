@@ -21,11 +21,13 @@ class AdminController extends Controller
         $articles = Articles::all();
         $users = User::all();
         $orders = Order::all();
+        $data = Order::where('status','==',0)->paginate(5);
         return view('admin.admin', [
             'products' => $products,
             'articles' => $articles,
             'users' => $users,
-            'orders' => $orders
+            'orders' => $orders,
+            'list'=>$data,
         ]);
     }
 
