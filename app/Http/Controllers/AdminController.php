@@ -21,7 +21,7 @@ class AdminController extends Controller
         $articles = Articles::all();
         $users = User::all();
         $orders = Order::all();
-        $data = Order::where('status','==',0)->paginate(5);
+        $data = Order::where('status','==',0)->paginate(4);
         return view('admin.admin', [
             'products' => $products,
             'articles' => $articles,

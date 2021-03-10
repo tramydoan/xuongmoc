@@ -5,14 +5,14 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Dashboard</h1>
+                    <h1 class="m-0 text-dark">Bảng Điều Khiển</h1>
                 </div><!-- /.col -->
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard v1</li>
-                    </ol>
-                </div><!-- /.col -->
+{{--                <div class="col-sm-6">--}}
+{{--                    <ol class="breadcrumb float-sm-right">--}}
+{{--                        <li class="breadcrumb-item"><a href="#">Home</a></li>--}}
+{{--                        <li class="breadcrumb-item active">Dashboard v1</li>--}}
+{{--                    </ol>--}}
+{{--                </div><!-- /.col -->--}}
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
     </div>
@@ -32,7 +32,8 @@
                             <p>Sản phẩm</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-bag"></i>
+
+                            <i class="fas fa-couch"></i>
                         </div>
                         <a href="{{route('quan-tri.product.index')}}" class="small-box-footer">Xem thêm <i
                                 class="fas fa-arrow-circle-right"></i></a>
@@ -48,7 +49,7 @@
                             <p>Tin tức</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-stats-bars"></i>
+                            <i class="fas fa-newspaper"></i>
                         </div>
                         <a href="{{route('quan-tri.article.index')}}" class="small-box-footer">Xem thêm <i
                                 class="fas fa-arrow-circle-right"></i></a>
@@ -64,7 +65,7 @@
                             <p>Người dùng</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-person-add"></i>
+                            <i class="fas fa-users"></i>
                         </div>
                         <a href="{{route('quan-tri.user.index')}}" class="small-box-footer">Xem thêm <i
                                 class="fas fa-arrow-circle-right"></i></a>
@@ -80,7 +81,7 @@
                             <p>Đơn hàng</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-pie-graph"></i>
+                            <i class="ion ion-bag"></i>
                         </div>
                         <a href="{{route('quan-tri.order.index')}}" class="small-box-footer">Xem thêm <i
                                 class="fas fa-arrow-circle-right"></i></a>
