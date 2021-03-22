@@ -40,6 +40,7 @@ class AdminController extends Controller
     {
         $mail = $request->input('email');
         $password = $request->input('password');
+
         if (Auth::attempt(['email'=>$mail,'password'=>$password])){
             return redirect()->route('quan-tri.admin');
         }

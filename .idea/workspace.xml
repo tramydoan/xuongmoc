@@ -8,7 +8,14 @@
     <list default="true" id="2a2a0283-db1b-47ea-b679-436417af3345" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/XuongMocController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/XuongMocController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/js/javascript.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/js/javascript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Frontend/auth/user-address.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Frontend/auth/user-address.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Frontend/layout/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Frontend/layout/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Frontend/layout/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Frontend/layout/main.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +275,14 @@
       <workItem from="1614503490996" duration="6757000" />
       <workItem from="1615288227974" duration="923000" />
       <workItem from="1615293711745" duration="8198000" />
-      <workItem from="1615361435347" duration="1476000" />
+      <workItem from="1615361435347" duration="2597000" />
+      <workItem from="1615371111951" duration="4000" />
+      <workItem from="1615371252865" duration="30000" />
+      <workItem from="1615396243244" duration="3333000" />
+      <workItem from="1615404382791" duration="4709000" />
+      <workItem from="1615428773602" duration="512000" />
+      <workItem from="1616081989197" duration="142000" />
+      <workItem from="1616386697321" duration="732000" />
     </task>
     <servers />
   </component>

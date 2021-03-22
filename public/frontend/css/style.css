@@ -745,7 +745,7 @@
     margin-right: 1em;
 }
 
-/* GIỎ HÀNG */
+/* ------------------------CART------------- */
 .heading-page:after {
     content: "";
     background: #252a2b;
@@ -1141,6 +1141,10 @@ input::-webkit-inner-spin-button {
     right: -0.75em;
     top: -0.75em;
     z-index: 2;
+}
+
+.product-table .order-product {
+    height: 80px;
 }
 .product-table td {
     padding-left: 1em;

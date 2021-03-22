@@ -30,13 +30,13 @@ class XuongMocController extends GeneralController
 
     public function login()
     {
-        $cart = Cart::content();
-        $total = Cart::priceTotal();
+//        $cart = Cart::content();
+//        $total = Cart::priceTotal();
 
         return view('frontend.auth.login', [
             'currentPage' => 'login',
-            'cart' => $cart,
-            'total' => $total,
+//            'cart' => $cart,
+//            'total' => $total,
         ]);
     }
 
@@ -111,8 +111,8 @@ class XuongMocController extends GeneralController
 
     public function home()
     {
-        $cart = Cart::content();
-        $total = Cart::priceTotal();
+//        $cart = Cart::content();
+//        $total = Cart::priceTotal();
 
         $product = Product::where('is_active', 1)->where('is_hot', 1)->limit(8)->orderBy('position', 'ASC')->get();
         $article = Articles::where('is_active', 1)->limit(4)->orderBy('position', 'ASC')->get();
@@ -123,15 +123,15 @@ class XuongMocController extends GeneralController
                 'product' => $product,
                 'article' => $article,
                 'vendors' => $vendors,
-                'cart' => $cart,
-                'total' => $total
+//                'cart' => $cart,
+//                'total' => $total
             ]);
     }
 
     public function myProfile()
     {
-        $cart = Cart::content();
-        $total = Cart::priceTotal();
+//        $cart = Cart::content();
+//        $total = Cart::priceTotal();
 
         if (Auth::check()) {
             $orders = Order::where('user_id', \auth()->user()->id)->get();
@@ -139,8 +139,8 @@ class XuongMocController extends GeneralController
                 'currentPage' => 'login',
                 'user' => \auth()->user(),
                 'orders' => $orders,
-                'cart' => $cart,
-                'total' => $total
+//                'cart' => $cart,
+//                'total' => $total
             ]);
         } else {
             return redirect()->route('xuongmoc.login');
@@ -149,53 +149,47 @@ class XuongMocController extends GeneralController
 
     public function myAddress()
     {
-        $cart = Cart::content();
-        $total = Cart::priceTotal();
+//        $cart = Cart::content();
+//        $total = Cart::priceTotal();
 
         $user = User::find(\auth()->user()->id);
         return view('Frontend.auth.user-address',
             [
                 'currentPage' => 'login',
                 'user' => $user,
-                'cart' => $cart,
-                'total' => $total
+//                'cart' => $cart,
+//                'total' => $total
             ]);
     }
 
     public function updateInfo(Request $request){
-        $cart = Cart::content();
-        $total = Cart::priceTotal();
 
-        $user = User::find(\auth()->user()->id);
-        $user->update([
-            'name' => $request->name,
-            'phone' => $request->phone,
-            'address' => $request->address,
-            'cart' => $cart,
-            'total' => $total
-        ]);
+
+            $user = User::find(\auth()->user()->id);
+
+            $user->fill($request->all())->save();
         return redirect()->route('xuongmoc.myAddress');
     }
 
     public function about()
     {
-        $cart = Cart::content();
-        $total = Cart::priceTotal();
+//        $cart = Cart::content();
+//        $total = Cart::priceTotal();
 
         $about = About::where('is_active', 1)->orderBy('position', 'ASC')->get();
         return view('Frontend.about.index',
             [
                 'currentPage' => 'abt',
                 'about' => $about,
-                'cart' => $cart,
-                'total' => $total
+//                'cart' => $cart,
+//                'total' => $total
             ]);
     }
 
     public function danhmuc($slug)
     {
-        $cart = Cart::content();
-        $total = Cart::priceTotal();
+//        $cart = Cart::content();
+//        $total = Cart::priceTotal();
 
         $banner = Banner::where('is_active', 1)->where('is_page', 1)->orderBy('position', 'ASC')->get();
         $cate = Category::where(['slug' => $slug])->first();
@@ -217,15 +211,15 @@ class XuongMocController extends GeneralController
                 'banner' => $banner,
                 'cate' => $cate,
                 'product' => $product,
-                'cart' => $cart,
-                'total' => $total
+//                'cart' => $cart,
+//                'total' => $total
             ]);
     }
 
     public function chiTietSanPham($slug)
     {
-        $cart = Cart::content();
-        $total = Cart::priceTotal();
+//        $cart = Cart::content();
+//        $total = Cart::priceTotal();
 
         $product = Product::where(['slug' => $slug])->first();
         $related_product = Product::where('categories_id', $product->categories_id)->limit(5)->get();
@@ -236,15 +230,15 @@ class XuongMocController extends GeneralController
             'product' => $product,
             'category' => $cate,
             'related_product' => $related_product,
-            'cart' => $cart,
-            'total' => $total
+//            'cart' => $cart,
+//            'total' => $total
         ]);
     }
 
     public function product()
     {
-        $cart = Cart::content();
-        $total = Cart::priceTotal();
+//        $cart = Cart::content();
+//        $total = Cart::priceTotal();
 
         //lấy danh sách sản phẩm theo thể loại
         $list = []; //chứa danh sách sản phẩm theo thể loại
@@ -264,20 +258,20 @@ class XuongMocController extends GeneralController
             [
                 'currentPage' => 'prd',
                 'list' => $list,
-                'cart' => $cart,
-                'total' => $total
+//                'cart' => $cart,
+//                'total' => $total
             ]);
     }
 
     public function chiTietTinTuc($slug)
     {
-        $cart = Cart::content();
-        $total = Cart::priceTotal();
+//        $cart = Cart::content();
+//        $total = Cart::priceTotal();
 
         $articleKey = 'article_' . $slug;
 
         // Kiểm tra Session của tin tức có tồn tại hay không.
-        // Nếu không tồn tại, sẽ tự động tăng trường view_count lên 1 đồng thời tạo session lưu trữ key tin tức.
+        // Nếu không tồn tại, sẽ tự động tăng view_count lên 1 đồng thời tạo session lưu trữ key tin tức.
         if (!Session::has($articleKey)) {
             Articles::where('slug', $slug)->increment('view_count');
             Session::put($articleKey, 1);
@@ -293,51 +287,51 @@ class XuongMocController extends GeneralController
             'currentPage' => 'art',
             'article' => $article,
             'new_article' => $new_article,
-            'cart' => $cart,
-            'total' => $total
+//            'cart' => $cart,
+//            'total' => $total
         ]);
     }
 
     public function article()
     {
-        $cart = Cart::content();
-        $total = Cart::priceTotal();
+//        $cart = Cart::content();
+//        $total = Cart::priceTotal();
 
-        $article = Articles::where('is_active', 1)->orderBy('position', 'ASC')->paginate(6);
+        $article = Articles::where('is_active', 1)->orderBy('position', 'DESC')->paginate(6);
         return view('Frontend.article.index',
             [
                 'currentPage' => 'art',
                 'article' => $article,
-                'cart' => $cart,
-                'total' => $total
+//                'cart' => $cart,
+//                'total' => $total
             ]);
     }
 
     public function vendor()
     {
-        $cart = Cart::content();
-        $total = Cart::priceTotal();
+//        $cart = Cart::content();
+//        $total = Cart::priceTotal();
 
         $vendors = Vendors::where('is_active', 1)->orderBy('position', 'ASC')->get();
         return view('Frontend.vendor.index',
             [
                 'currentPage' => 'vd',
                 'vendors' => $vendors,
-                'cart' => $cart,
-                'total' => $total
+//                'cart' => $cart,
+//                'total' => $total
             ]);
     }
 
     public function contact()
     {
-        $cart = Cart::content();
-        $total = Cart::priceTotal();
+//        $cart = Cart::content();
+//        $total = Cart::priceTotal();
 
         return view('Frontend.contact.index',
             [
                 'currentPage' => 'ct',
-                'cart' => $cart,
-                'total' => $total
+//                'cart' => $cart,
+//                'total' => $total
             ]);
     }
 
@@ -355,20 +349,30 @@ class XuongMocController extends GeneralController
 
     public function search(Request $request)
     {
+//        $cart = Cart::content();
+//        $total = Cart::priceTotal();
+
         $product = Product::where('name', 'like', '%' . $request->key . '%')->paginate(8);
         return view('Frontend.search',
             [
                 'currentPage' => 'search',
                 'products' => $product,
-                'key' => $request->key
+                'key' => $request->key,
+//                'cart' => $cart,
+//                'total' => $total,
             ]);
     }
 
     public function searchAuto($key)
     {
+//        $cart = Cart::content();
+//        $total = Cart::priceTotal();
+
         $product = Product::where('name', 'like', '%' . $key . '%')->paginate(5);
         return response()->json([
-            'products' => $product
+            'products' => $product,
+//            'cart' => $cart,
+//            'total' => $total
         ]);
     }
 
@@ -386,12 +390,17 @@ class XuongMocController extends GeneralController
 
     public function addcart($id)
     {
+//        $cart = Cart::content();
+//        $total = Cart::priceTotal();
+
         $product = Product::find($id);
         $price = $product->sale ?? $product->price;
 
         Cart::add($product->id, $product->name, 1, $price, 0, [
             'image' => $product->image,
-            'slug' => $product->slug
+            'slug' => $product->slug,
+//            'cart' => $cart,
+//            'total' => $total
         ]);
         return redirect()->route('xuongmoc.cart')->with(['mess' => 'oke']);
     }

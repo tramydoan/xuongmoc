@@ -96,67 +96,67 @@
 
 
     {{--CART NAV--}}
-    <div id="cart-nav" class="cart-sidebar cart-form-wrapper">
-        <div id="site-cart" class="site-nav-container cart-form-open">
-            <div class="site-nav-container-last">
-                <p class="title">Giỏ hàng</p>
-                <div class="cart-view">
-                    <table id="cart-view">
-                        <tbody>
-                        @if(count($cart) > 0)
+{{--    <div id="cart-nav" class="cart-sidebar cart-form-wrapper">--}}
+{{--        <div id="site-cart" class="site-nav-container cart-form-open">--}}
+{{--            <div class="site-nav-container-last">--}}
+{{--                <p class="title">Giỏ hàng</p>--}}
+{{--                <div class="cart-view">--}}
+{{--                    <table id="cart-view">--}}
+{{--                        <tbody>--}}
+{{--                        @if(count($cart) > 0)--}}
 
-                            @foreach($cart as $item)
-                                <tr class="item_2">
-                                    <td class="img">
-                                        <a href="{{route('xuongmoc.chitietsanpham',['slug'=>$item->options['slug']])}}">
-                                            <img src="{{$item->options['image']}}" alt="">
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <div>
-                                            <a class="pro-title-view" href="{{route('xuongmoc.chitietsanpham',['slug'=>$item->options['slug']])}}">{{$item->name}}</a>
-                                            <span class="remove_link remove-cart">
+{{--                            @foreach($cart as $item)--}}
+{{--                                <tr class="item_2">--}}
+{{--                                    <td class="img">--}}
+{{--                                        <a href="{{route('xuongmoc.chitietsanpham',['slug'=>$item->options['slug']])}}">--}}
+{{--                                            <img src="{{$item->options['image']}}" alt="">--}}
+{{--                                        </a>--}}
+{{--                                    </td>--}}
+{{--                                    <td>--}}
+{{--                                        <div>--}}
+{{--                                            <a class="pro-title-view" href="{{route('xuongmoc.chitietsanpham',['slug'=>$item->options['slug']])}}">{{$item->name}}</a>--}}
+{{--                                            <span class="remove_link remove-cart">--}}
 {{--                                        <a href=""><i class="fa fa-times"></i></a>--}}
-                                    </span>
-                                        </div>
-                                        <span class="materials">Gỗ lim</span>
-                                        <div>
-                                            <span class="pro-quantity-view">{{$item->qty}}</span>
-                                            <span class="pro-price-view">{{number_format($item->price)}}vnđ</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        @else
-                            <p>Hiện chưa có sản phẩm</p>
-                        @endif
-                        </tbody>
-                    </table>
+{{--                                    </span>--}}
+{{--                                        </div>--}}
+{{--                                        <span class="materials">Gỗ lim</span>--}}
+{{--                                        <div>--}}
+{{--                                            <span class="pro-quantity-view">{{$item->qty}}</span>--}}
+{{--                                            <span class="pro-price-view">{{number_format($item->price)}}vnđ</span>--}}
+{{--                                        </div>--}}
+{{--                                    </td>--}}
+{{--                                </tr>--}}
+{{--                            @endforeach--}}
+{{--                        @else--}}
+{{--                            <p>Hiện chưa có sản phẩm</p>--}}
+{{--                        @endif--}}
+{{--                        </tbody>--}}
+{{--                    </table>--}}
 
-                    <span class="line"></span>
+{{--                    <span class="line"></span>--}}
 
-                    <table class="table-total">
-                        <tbody>
-                        <tr>
-                            <td class="text-left">TỔNG TIỀN:</td>
-                            <td class="text-right" id="total-view-cart">{{$total}}vnđ</td>
-                        </tr>
-                        <tr>
-                            <td><a href="{{route('xuongmoc.cart')}}" class="linktocart button dark hvr-sweep-to-right">Xem
-                                    giỏ hàng</a></td>
-                            <td><a href="{{route('xuongmoc.checkout')}}"
-                                   class="linktocheckout button dark hvr-sweep-to-right">Thanh toán</a></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <button id="site-close-handle-cart" class="site-close-handle hvr-grow" aria-label="Đóng" title="Đóng">
-            <span></span>
-            <span></span>
-        </button>
-    </div>
+{{--                    <table class="table-total">--}}
+{{--                        <tbody>--}}
+{{--                        <tr>--}}
+{{--                            <td class="text-left">TỔNG TIỀN:</td>--}}
+{{--                            <td class="text-right" id="total-view-cart">{{$total}}vnđ</td>--}}
+{{--                        </tr>--}}
+{{--                        <tr>--}}
+{{--                            <td><a href="{{route('xuongmoc.cart')}}" class="linktocart button dark hvr-sweep-to-right">Xem--}}
+{{--                                    giỏ hàng</a></td>--}}
+{{--                            <td><a href="{{route('xuongmoc.checkout')}}"--}}
+{{--                                   class="linktocheckout button dark hvr-sweep-to-right">Thanh toán</a></td>--}}
+{{--                        </tr>--}}
+{{--                        </tbody>--}}
+{{--                    </table>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <button id="site-close-handle-cart" class="site-close-handle hvr-grow" aria-label="Đóng" title="Đóng">--}}
+{{--            <span></span>--}}
+{{--            <span></span>--}}
+{{--        </button>--}}
+{{--    </div>--}}
 </div>
 {{--BACK TO TOP--}}
 <div class="back-to-top">

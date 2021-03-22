@@ -40,12 +40,16 @@ class ProductController extends Controller
         $request->validate([
             'name' => 'required',
             'image' => 'required|image|mimes:png,jpg,jpeg|max:10000',
-            'price' => 'required'
+            'price' => 'required|digits:3',
+            'stock' => 'required|digits:2'
         ], [
             'name.required' => 'Tên không được để trống',
             'price.required' => 'Giá không được để trống',
+            'price.digits' => 'Giá không được để nhỏ hơn hoặc bằng 0',
             'image.required' => 'Ảnh không được để trống',
-            'image.image' => 'Ảnh không đúng định dạng'
+            'image.image' => 'Ảnh không đúng định dạng',
+            'stock.required' => 'Số lượng không được để trống',
+            'stock.digits' => 'Số lượng không được để nhỏ hơn hoặc bằng 0',
         ]);
 
         $product = new Product(); // khởi tạo model

@@ -15,7 +15,7 @@
                     <li>
                         <a href="{{route('xuongmoc.myProfile')}}"><i class="fas fa-user-circle mr-2 {{$currentPage == 'login' ? ' ' : ''}}"></i></a>
                         <a class="search-menu" data-toggle="search-form"><i class="fas fa-search mr-2 {{$currentPage == 'search' ? ' ' : ''}}"></i></a>
-                        <a  class="cart-menu" data-toggle="cart-form" ><i class="fas fa-shopping-cart mr-1 {{$currentPage == 'cart' ? ' ' : ''}}"></i></a>
+                        <a href="{{route('xuongmoc.cart')}}" class="cart-menu"  ><i class="fas fa-shopping-cart mr-1 {{$currentPage == 'cart' ? ' ' : ''}}"></i></a>
 {{--                        <a class="cart-menu" data-toggle="cart-form" ><i class="fas fa-shopping-cart mr-1 {{$currentPage == 'cart' ? ' ' : ''}}"></i>[<span class="total-cart">0</span>]</a>--}}
                     </li>
                 </ul>

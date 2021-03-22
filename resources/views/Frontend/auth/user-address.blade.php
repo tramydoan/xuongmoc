@@ -95,15 +95,15 @@
                                     @csrf
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fas fa-user"></i></span>
-                                        <input type="text" id="address_first_name " class="form-control textbox" value="{{$user->name}}" name="name" size="40" placeholder="Tên">
+                                        <input type="text" id="name" class="form-control textbox" value="{{$user->name}}" name="name" size="40" placeholder="Tên">
                                     </div>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fas fa-home"></i></span>
-                                        <input type="text" for="address_company " class="form-control textbox" value="{{$user->address}}" name="address" size="40" placeholder="Địa chỉ">
+                                        <input type="text" class="form-control textbox" value="{{$user->address}}" name="address" size="40" placeholder="Địa chỉ">
                                     </div>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fas fa-home"></i></span>
-                                        <input type="text" id="address1 " class="form-control textbox" name="phone" size="40" value="{{$user->phone}}" placeholder="Số điện thoại">
+                                        <input type="text" id="phone" class="form-control textbox" name="phone" size="40" value="{{$user->phone}}" placeholder="Số điện thoại">
                                     </div>
                                     <div class="action_bottom">
                                         <input class="btn bt-primary" type="submit" value="Cập nhật">
